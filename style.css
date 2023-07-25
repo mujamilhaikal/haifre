@@ -1,104 +1,130 @@
 :root {
-    --pink: #f14e95;
-    --bg: #0a0a0a;
-    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
 body {
-    font-size: 1.2rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-
+  font-size: 1.2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  min-height: 4000px;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/haikal.jpg);
-    z-index: -1;
-    filter: blur();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(src/background.jpg);
+  z-index: -1;
+  filter: blur();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .hero {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
 .hero h1,
 .hero h4,
 .hero p {
-    text-shadow: var(--shadow);
+  text-shadow: var(--shadow);
 }
 
 .hero h1 {
-    font-family: 'Sacramento', cursive;
-    font-size: 6rem;
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
 }
 
 .hero h4 {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .hero p {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .hero a {
-    color: var(--pink);
-    background-color: whitesmoke;
-    box-shadow: var(--shadow);
+  color: var(--pink);
+  background-color: whitesmoke;
+  box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-    background-color: var(--pink);
-    color: whitesmoke;
+  background-color: var(--pink);
+  color: whitesmoke;
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(3px);
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url(src/flower.png);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
 
 /* Media Query */
 /* Laptop */
 @media (max-width: 992px) {
-    html {
-        font-size: 65%;
-    }
+  html {
+    font-size: 65%;
+  }
 
-    .simply-countdown>.simply-section {
-        padding: 70px;
-    }
-
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 /* tablet */
 @media (max-width: 768px) {
-    html {
-        font-size: 62.5%;
-    }
+  html {
+    font-size: 62.5%;
+  }
 
-    .simply-countdown>.simply-section {
-        padding: 60px;
-        margin: 5px;
-    }
-
-
+  .simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 5px;
+  }
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 /* mobile */
 @media (max-width: 576px) {
-    html {
-        font-size: 60%;
-    }
+  html {
+    font-size: 60%;
+  }
 
-    .simply-countdown>.simply-section {
-        padding: 40px;
-        margin: 3px;
-    }
-}
-
-.hide-button {
-    display: none;
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 3px;
+  }
 }

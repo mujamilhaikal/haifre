@@ -21,11 +21,6 @@
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
     <script src="countdown/simplyCountdown.min.js"></script>
 
-    <!-- audio -->
-    <audio id="audio" autoplay loop>
-      <source src="img/audio.MP3" type="audio/mpeg" />
-    </audio>
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -45,8 +40,64 @@
         <a href="https://github.com/mujamilhaikal/" class="btn btn-lg mt-4"
           >Lihat Undangan</a
         >
-        <a id="playButton" class="btn btn-lg mt-4">Musik</a>
       </main>
+    </section>
+
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Haifre</a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Haifre</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#story">Story</a>
+              <a class="nav-link" href="#galleri">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gifts">Gifts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Acara Pernikahan</h2>
+            <h3>Diselenggarakan pada 20 November 2023 di Serang, Banten.</h3>
+            <p>
+              Oleh Karena itu, kami dengan segala hormat mengundang Bapak/Ibu,
+              Saudara/i, untuk menghadiri acara pernikahan kami.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script
@@ -54,8 +105,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-
-    <script src="countdown/audio.js"></script>
 
     <script>
       simplyCountdown(".simply-countdown", {
