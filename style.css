@@ -4,16 +4,13 @@
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   font-size: 1.2rem;
   font-family: "Plus Jakarta Sans", sans-serif;
   min-height: 4000px;
 }
 
+/* Background gambar blur pada hero section */
 .hero::before {
   content: "";
   position: absolute;
@@ -23,7 +20,7 @@ body {
   height: 100%;
   background-image: url(src/background.jpg);
   z-index: -1;
-  filter: blur();
+  filter: blur(2px); /* Ganti dengan nilai blur sesuai kebutuhan */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -34,6 +31,7 @@ body {
   min-height: 100vh;
 }
 
+/* Gaya teks pada hero section */
 .hero h1,
 .hero h4,
 .hero p {
@@ -64,9 +62,15 @@ body {
   color: whitesmoke;
 }
 
+/* Navbar */
 .mynavbar {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(3px);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Ganti dengan warna latar sesuai kebutuhan */
+  backdrop-filter: blur(10px); /* Ganti dengan nilai blur sesuai kebutuhan */
 }
 
 .mynavbar .offcanvas {
@@ -84,6 +88,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Home section */
 .home {
   background-image: url(src/flower.png);
   background-size: cover;
@@ -132,7 +137,7 @@ body {
   background-color: whitesmoke;
   display: flex;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
   transform: translate(-50%) translateY(65px);
@@ -143,6 +148,7 @@ body {
   color: var(--pink);
 }
 
+/* Info section */
 .info {
   background-color: var(--bg);
   color: whitesmoke;
@@ -199,16 +205,31 @@ body {
   .simply-countdown > .simply-section {
     padding: 70px;
   }
+
+  .mynavbar .navbar-toggler-icon {
+    color: var(--pink);
+  }
+
+  .mynavbar .navbar-toggler {
+    border-color: var(--pink);
+  }
+
+  .mynavbar .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
   }
+
   .home .heart {
     display: none;
   }
 }
 
-/* tablet */
+/* Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -218,26 +239,54 @@ body {
     padding: 60px;
     margin: 5px;
   }
+
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
   }
 }
 
-/* mobile */
+/* Mobile */
 @media (max-width: 576px) {
   html {
     font-size: 60%;
+    overflow-x: hidden;
   }
 
   .simply-countdown > .simply-section {
     padding: 40px;
     margin: 3px;
   }
-  .mynavbar {
-    position: sticky;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(3px);
+
+  .home .heart {
+    display: none;
+  }
+
+  .mynavbar .navbar-toggler-icon {
+    color: var(--pink);
+  }
+
+  .mynavbar .navbar-toggler {
+    border-color: var(--pink);
+  }
+
+  .mynavbar .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 3px;
+  }
+
+  /* Style untuk card pada info section */
+  .info .card {
+    margin-bottom: 20px;
   }
 }
